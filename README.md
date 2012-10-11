@@ -32,7 +32,7 @@ FatSecret.configure do |config|
   config.access_key = <your access key>
   config.consumer_key = <your consumer key>
   config.shared_secret = <your shared secret>
-  config.logger = <your logger> (OPTIONAL)
+  config.logger = <your logger> #OPTIONAL
 end
 ```
 
@@ -48,7 +48,7 @@ Getting 1 Food
 
 ```ruby
 food = FatSecret::Food.get(id)
-food.servings (automatically lazy loaded for you)
+food.servings #(automatically lazy loaded for you)
 ```
 
 
