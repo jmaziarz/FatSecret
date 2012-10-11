@@ -1,29 +1,64 @@
-# FatSecret
+FatSecret
+=========
 
-TODO: Write a gem description
+Introduction
+------------
 
-## Installation
+A ruby wrapper for the FatSecret API. Currently only supports the foods.search and food.get methods, but I will add more when I have the need/time. Alternatively please feel free to send a tested pull request.
 
-Add this line to your application's Gemfile:
+Prerequisits
+------------
 
-    gem 'fat_secret'
+Get your api key and oauth tokens by signing up for an account with FatSecret at http://platform.fatsecret.com/api/Default.aspx?screen=r
 
-And then execute:
 
-    $ bundle
+Installation
+------------
 
-Or install it yourself as:
+Bundler:
 
-    $ gem install fat_secret
+`gem 'fat_secret'
 
-## Usage
+Otherwise:
 
-TODO: Write usage instructions here
+`gem install fat_secret
 
-## Contributing
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Setup
+-----
+
+```ruby
+FatSecret.configure do |config|
+  config.access_key = <your access key>
+  config.consumer_key = <your consumer key>
+  config.shared_secret = <your shared secret>
+  config.logger = <your logger> (OPTIONAL)
+end
+```
+
+Searching for Food
+------------------
+
+foods = FatSecret::Food.search('Milk')
+
+Getting 1 Food
+--------------
+
+food = FatSecret::Food.get(id)
+food.servings (automatically lazy loaded for you)
+
+
+Development
+-----------
+
+```
+git clone git://github.com/mattbeedle/FatSecret.git
+cd FatSecret
+bundle install
+```
+
+Then add your own api keys to the `spec/support/helpers.rb` file before running the specs with
+
+```
+bundle exec rspec
+```
