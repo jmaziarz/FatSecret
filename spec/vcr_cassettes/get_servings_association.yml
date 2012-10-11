@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://platform.fatsecret.com/rest/server.api?food_id=793&format=json&method=food.get&oauth_consumer_key=7ebedda1451640ecbd8db41ea22d1351&oauth_nonce=29a81c9406bc7d1c&oauth_signature=FR8Qs5YHFr2OtXjYAhTU2GNds3Q%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1349949947&oauth_version=1.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      server:
+      - Microsoft-IIS/7.5
+      x-aspnet-version:
+      - 2.0.50727
+      date:
+      - Thu, 11 Oct 2012 10:05:40 GMT
+      content-length:
+      - '6015'
+    body:
+      encoding: US-ASCII
+      string: ! '{ "food": {"food_id": "793", "food_name": "Milk", "food_type": "Generic",
+        "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk",
+        "servings": { "serving": [ {"calcium": "28", "calories": "122", "carbohydrate":
+        "11.49", "cholesterol": "17", "fat": "4.88", "fiber": "0", "iron": "0", "measurement_description":
+        "cup", "metric_serving_amount": "244.000", "metric_serving_unit": "g", "monounsaturated_fat":
+        "1.301", "number_of_units": "1.000", "polyunsaturated_fat": "0.249", "potassium":
+        "361", "protein": "8.03", "saturated_fat": "2.965", "serving_description":
+        "1 cup", "serving_id": "3", "serving_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk?portionid=3&portionamount=1.000",
+        "sodium": "100", "sugar": "12.59", "vitamin_a": "0", "vitamin_c": "0" }, {"calcium":
+        "4", "calories": "15", "carbohydrate": "1.44", "cholesterol": "2", "fat":
+        "0.61", "fiber": "0", "iron": "0", "measurement_description": "fl oz", "metric_serving_amount":
+        "30.500", "metric_serving_unit": "g", "monounsaturated_fat": "0.163", "number_of_units":
+        "1.000", "polyunsaturated_fat": "0.031", "potassium": "45", "protein": "1.00",
+        "saturated_fat": "0.371", "serving_description": "1 fl oz", "serving_id":
+        "192", "serving_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk?portionid=192&portionamount=1.000",
+        "sodium": "13", "sugar": "1.57", "vitamin_a": "0", "vitamin_c": "0" }, {"calcium":
+        "28", "calories": "122", "carbohydrate": "11.49", "cholesterol": "17", "fat":
+        "4.88", "fiber": "0", "iron": "0", "measurement_description": "Quantity not
+        specified", "metric_serving_amount": "244.000", "metric_serving_unit": "g",
+        "monounsaturated_fat": "1.301", "number_of_units": "1.000", "polyunsaturated_fat":
+        "0.249", "potassium": "361", "protein": "8.03", "saturated_fat": "2.965",
+        "serving_description": "1 serving (244 g)", "serving_id": "4", "serving_url":
+        "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk?portionid=4&portionamount=1.000",
+        "sodium": "100", "sugar": "12.59", "vitamin_a": "0", "vitamin_c": "0" }, {"calcium":
+        "0", "calories": "1", "carbohydrate": "0.12", "cholesterol": "0", "fat": "0.05",
+        "fiber": "0", "iron": "0", "measurement_description": "Guideline amount per
+        fl oz of beverage", "metric_serving_amount": "2.500", "metric_serving_unit":
+        "g", "monounsaturated_fat": "0.013", "number_of_units": "1.000", "polyunsaturated_fat":
+        "0.003", "potassium": "4", "protein": "0.08", "saturated_fat": "0.030", "serving_description":
+        "1 Guideline amount per fl oz beverage", "serving_id": "5", "serving_url":
+        "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk?portionid=5&portionamount=1.000",
+        "sodium": "1", "sugar": "0.13", "vitamin_a": "0", "vitamin_c": "0" }, {"calcium":
+        "7", "calories": "30", "carbohydrate": "2.87", "cholesterol": "4", "fat":
+        "1.22", "fiber": "0", "iron": "0", "measurement_description": "Guideline amount
+        per cup of hot cereal", "metric_serving_amount": "61.000", "metric_serving_unit":
+        "g", "monounsaturated_fat": "0.325", "number_of_units": "1.000", "polyunsaturated_fat":
+        "0.062", "potassium": "90", "protein": "2.01", "saturated_fat": "0.741", "serving_description":
+        "1 Guideline amount per cup hot cereal", "serving_id": "6", "serving_url":
+        "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk?portionid=6&portionamount=1.000",
+        "sodium": "25", "sugar": "3.15", "vitamin_a": "0", "vitamin_c": "0" }, {"calcium":
+        "14", "calories": "61", "carbohydrate": "5.75", "cholesterol": "9", "fat":
+        "2.44", "fiber": "0", "iron": "0", "measurement_description": "Guideline amount
+        per cup of cold cereal", "metric_serving_amount": "122.000", "metric_serving_unit":
+        "g", "monounsaturated_fat": "0.650", "number_of_units": "1.000", "polyunsaturated_fat":
+        "0.124", "potassium": "181", "protein": "4.01", "saturated_fat": "1.482",
+        "serving_description": "1 Guideline amount per cup cold cereal", "serving_id":
+        "7", "serving_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk?portionid=7&portionamount=1.000",
+        "sodium": "50", "sugar": "6.30", "vitamin_a": "0", "vitamin_c": "0" }, {"calcium":
+        "35", "calories": "148", "carbohydrate": "13.99", "cholesterol": "21", "fat":
+        "5.94", "fiber": "0", "iron": "0", "measurement_description": "soup can of
+        milk for modifications", "metric_serving_amount": "297.000", "metric_serving_unit":
+        "g", "monounsaturated_fat": "1.583", "number_of_units": "1.000", "polyunsaturated_fat":
+        "0.303", "potassium": "440", "protein": "9.77", "saturated_fat": "3.609",
+        "serving_description": "1 soup can milk for modifications", "serving_id":
+        "198", "serving_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk?portionid=198&portionamount=1.000",
+        "sodium": "122", "sugar": "15.33", "vitamin_a": "0", "vitamin_c": "0" }, {"calcium":
+        "12", "calories": "50", "carbohydrate": "4.71", "cholesterol": "7", "fat":
+        "2.00", "fiber": "0", "iron": "0", "measurement_description": "g", "metric_serving_amount":
+        "100.000", "metric_serving_unit": "g", "monounsaturated_fat": "0.533", "number_of_units":
+        "100.000", "polyunsaturated_fat": "0.102", "potassium": "148", "protein":
+        "3.29", "saturated_fat": "1.215", "serving_description": "100 g", "serving_id":
+        "49473", "serving_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk?portionid=49473&portionamount=100.000",
+        "sodium": "41", "sugar": "5.16", "vitamin_a": "0", "vitamin_c": "0" }, {"calcium":
+        "12", "calories": "52", "carbohydrate": "4.86", "cholesterol": "7", "fat":
+        "2.06", "fiber": "0", "iron": "0", "measurement_description": "ml", "metric_serving_amount":
+        "103.133", "metric_serving_unit": "g", "monounsaturated_fat": "0.550", "number_of_units":
+        "100.000", "polyunsaturated_fat": "0.105", "potassium": "153", "protein":
+        "3.39", "saturated_fat": "1.253", "serving_description": "100 ml", "serving_id":
+        "1136438", "serving_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk?portionid=1136438&portionamount=100.000",
+        "sodium": "42", "sugar": "5.32", "vitamin_a": "0", "vitamin_c": "0" } ] }
+        }}'
+    http_version: '1.1'
+  recorded_at: Thu, 11 Oct 2012 10:05:48 GMT
+recorded_with: VCR 2.2.5

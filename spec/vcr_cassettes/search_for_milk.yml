@@ -1,0 +1,189 @@
+---
+http_interactions:
+- request:
+    method: get
+    # uri: http://platform.fatsecret.com/rest/server.api?format=json&max_results=50&method=foods.search&oauth_consumer_key=7ebedda1451640ecbd8db41ea22d1351&oauth_nonce=1234&oauth_signature=YEHblI2X9JWOhRgWwWDvKw%2BhoPw%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1349948152&oauth_version=1.0&page_number=0&search_expression=Milk
+    uri: http://platform.fatsecret.com/rest/server.api?format=json&max_results=50&method=foods.search&oauth_consumer_key=abcd&oauth_nonce=1234&oauth_signature=PqE6UMGxCF4FySgesdMDE8qNopI%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1325372400&oauth_version=1.0&page_number=0&search_expression=Milk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      server:
+      - Microsoft-IIS/7.5
+      x-aspnet-version:
+      - 2.0.50727
+      date:
+      - Thu, 11 Oct 2012 09:35:46 GMT
+      content-length:
+      - '14621'
+    body:
+      encoding: US-ASCII
+      string: ! '{ "foods": { "food": [ {"food_description": "Per 100g - Calories:
+        50kcal | Fat: 2.00g | Carbs: 4.71g | Protein: 3.29g", "food_id": "793", "food_name":
+        "Milk", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk"
+        }, {"food_description": "Per 100g - Calories: 60kcal | Fat: 3.25g | Carbs:
+        4.52g | Protein: 3.22g", "food_id": "794", "food_name": "Whole Milk", "food_type":
+        "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk-cows-fluid-whole"
+        }, {"food_description": "Per 100g - Calories: 42kcal | Fat: 0.97g | Carbs:
+        4.99g | Protein: 3.37g", "food_id": "803", "food_name": "1% Fat Milk", "food_type":
+        "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk-cows-fluid-1%25-fat"
+        }, {"food_description": "Per 100g - Calories: 50kcal | Fat: 1.97g | Carbs:
+        4.68g | Protein: 3.30g", "food_id": "800", "food_name": "2% Fat Milk", "food_type":
+        "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk-cows-fluid-2%25-fat"
+        }, {"food_description": "Per 100g - Calories: 35kcal | Fat: 0.18g | Carbs:
+        4.85g | Protein: 3.41g", "food_id": "33820", "food_name": "Milk (Nonfat)",
+        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(nonfat)"
+        }, {"food_description": "Per 100g - Calories: 42kcal | Fat: 0.97g | Carbs:
+        4.99g | Protein: 3.37g", "food_id": "303408", "food_name": "Low Fat Milk",
+        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/mik-low-fat"
+        }, {"food_description": "Per 100g - Calories: 50kcal | Fat: 1.97g | Carbs:
+        4.68g | Protein: 3.30g", "food_id": "303410", "food_name": "Reduced Fat Milk",
+        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk-reduced-fat"
+        }, {"food_description": "Per 100g - Calories: 52kcal | Fat: 1.92g | Carbs:
+        4.93g | Protein: 4.48g", "food_id": "38329", "food_name": "Soy Milk", "food_type":
+        "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/soy-milk"
+        }, {"food_description": "Per 100g - Calories: 76kcal | Fat: 2.10g | Carbs:
+        11.55g | Protein: 3.08g", "food_id": "887", "food_name": "Chocolate Milk",
+        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk-chocolate"
+        }, {"food_description": "Per 100g - Calories: 50kcal | Fat: 1.97g | Carbs:
+        4.68g | Protein: 3.30g", "food_id": "33752", "food_name": "Milk (2% Lowfat
+        with Added Vitamin A)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(2%25-lowfat-with-added-vitamin-a)"
+        }, {"food_description": "Per 100g - Calories: 44kcal | Fat: 1.28g | Carbs:
+        4.81g | Protein: 3.33g", "food_id": "799", "food_name": "Milk (Other Than
+        Whole, 1% or Skim)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk-cows-fluid-other-than-whole-1%25-or-skim-(formerly-milk-cows-fluid-lowfat-ns-as-to-percent-fat)"
+        }, {"food_description": "Per 986g - Calories: 631kcal | Fat: 34.21g | Carbs:
+        49.20g | Protein: 33.72g", "food_id": "819", "food_name": "Whole Dry Milk
+        (Reconstituted)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk-dry-reconstituted-whole"
+        }, {"food_description": "Per 980g - Calories: 323kcal | Fat: 0.69g | Carbs:
+        47.52g | Protein: 31.94g", "food_id": "821", "food_name": "Nonfat Dry Milk
+        (Reconstituted)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk-dry-reconstituted-nonfat"
+        }, {"food_description": "Per 100g - Calories: 362kcal | Fat: 0.77g | Carbs:
+        51.98g | Protein: 36.16g", "food_id": "33764", "food_name": "Milk (Nonfat,
+        Dry)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(nonfat-dry)"
+        }, {"food_description": "Per 100g - Calories: 42kcal | Fat: 0.97g | Carbs:
+        4.99g | Protein: 3.37g", "food_id": "33755", "food_name": "Milk (1% Lowfat
+        with Added Vitamin A)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(1%25-lowfat-with-added-vitamin-a)"
+        }, {"food_description": "Per 100g - Calories: 134kcal | Fat: 7.56g | Carbs:
+        10.04g | Protein: 6.81g", "food_id": "33769", "food_name": "Evaporated Milk",
+        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/evaporated-milk"
+        }, {"food_description": "Per 100g - Calories: 78kcal | Fat: 0.20g | Carbs:
+        11.35g | Protein: 7.55g", "food_id": "33770", "food_name": "Evaporated Milk
+        (Nonfat)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/evaporated-milk-(nonfat)"
+        }, {"food_description": "Per 100g - Calories: 83kcal | Fat: 3.39g | Carbs:
+        10.34g | Protein: 3.17g", "food_id": "33771", "food_name": "Chocolate Milk
+        (Whole)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/chocolate-milk-(whole)"
+        }, {"food_description": "Per 100g - Calories: 63kcal | Fat: 1.00g | Carbs:
+        10.44g | Protein: 3.24g", "food_id": "33773", "food_name": "Chocolate Milk
+        (Lowfat)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/chocolate-milk-(lowfat)"
+        }, {"food_description": "Per 100g - Calories: 76kcal | Fat: 1.90g | Carbs:
+        12.13g | Protein: 2.99g", "food_id": "33772", "food_name": "Chocolate Milk
+        (Reduced Fat)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/chocolate-milk-(reduced-fat)"
+        }, {"food_description": "Per 100g - Calories: 69kcal | Fat: 4.14g | Carbs:
+        4.45g | Protein: 3.56g", "food_id": "33775", "food_name": "Goats Milk", "food_type":
+        "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/goats-milk"
+        }, {"food_description": "Per 100g - Calories: 40kcal | Fat: 0.88g | Carbs:
+        4.79g | Protein: 3.31g", "food_id": "33761", "food_name": "Buttermilk (Lowfat,
+        Cultured)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/buttermilk-(lowfat-cultured)"
+        }, {"food_description": "Per 100g - Calories: 60kcal | Fat: 3.25g | Carbs:
+        4.52g | Protein: 3.22g", "food_id": "796", "food_name": "Whole Milk (Calcium
+        Fortified)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk-calcium-fortified-cows-fluid-whole"
+        }, {"food_description": "Per 100g - Calories: 60kcal | Fat: 3.25g | Carbs:
+        4.52g | Protein: 3.22g", "food_id": "33750", "food_name": "Milk (Whole Milk)",
+        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(whole-milk)"
+        }, {"food_description": "Per 100g - Calories: 34kcal | Fat: 0.08g | Carbs:
+        4.96g | Protein: 3.37g", "food_id": "33758", "food_name": "Milk (Nonfat with
+        Added Vitamin A)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(nonfat-with-added-vitamin-a)"
+        }, {"food_description": "Per 100g - Calories: 56kcal | Fat: 1.98g | Carbs:
+        5.49g | Protein: 3.95g", "food_id": "33754", "food_name": "Milk (2% Lowfat
+        with Added Vitamin A and Protein)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(2%25-lowfat-with-added-vitamin-a-and-protein)"
+        }, {"food_description": "Per 100g - Calories: 41kcal | Fat: 0.25g | Carbs:
+        5.56g | Protein: 3.96g", "food_id": "33760", "food_name": "Milk (Nonfat with
+        Added Vitamin A and Protein)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(nonfat-with-added-vitamin-a-and-protein)"
+        }, {"food_description": "Per 100g - Calories: 35kcal | Fat: 0.18g | Carbs:
+        4.85g | Protein: 3.40g", "food_id": "40654", "food_name": "Milk (Fat Free
+        or Skim, Calcium Fortified)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(fat-free-or-skim-calcium-fortified)"
+        }, {"food_description": "Per 100g - Calories: 51kcal | Fat: 1.92g | Carbs:
+        4.97g | Protein: 3.48g", "food_id": "33753", "food_name": "Milk (2% Lowfat
+        with Added Vitamin A and Nonfat Solids)", "food_type": "Generic", "food_url":
+        "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(2%25-lowfat-with-added-vitamin-a-and-nonfat-solids)"
+        }, {"food_description": "Per 100g - Calories: 37kcal | Fat: 0.25g | Carbs:
+        5.02g | Protein: 3.57g", "food_id": "33759", "food_name": "Milk (Nonfat with
+        Added Vitamin A and Nonfat Solids)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(nonfat-with-added-vitamin-a-and-nonfat-solids)"
+        }, {"food_description": "Per 100g - Calories: 321kcal | Fat: 8.70g | Carbs:
+        54.40g | Protein: 7.91g", "food_id": "33768", "food_name": "Canned Milk (Sweetened)",
+        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/canned-milk-(sweetened)"
+        }, {"food_description": "Per 100g - Calories: 77kcal | Fat: 2.33g | Carbs:
+        10.63g | Protein: 3.52g", "food_id": "33774", "food_name": "Hot Cocoa Milk",
+        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/hot-cocoa-milk"
+        }, {"food_description": "Per 100g - Calories: 56kcal | Fat: 1.98g | Carbs:
+        5.49g | Protein: 3.95g", "food_id": "33821", "food_name": "Milk (2% Lowfat
+        Without Added Vitamin A and Nonfat Solids)", "food_type": "Generic", "food_url":
+        "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(2%25-lowfat-without-added-vitamin-a-and-nonfat-solids)"
+        }, {"food_description": "Per 100g - Calories: 134kcal | Fat: 7.56g | Carbs:
+        10.04g | Protein: 6.81g", "food_id": "33822", "food_name": "Evaporated Milk
+        (with Added Vitamin A)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/evaporated-milk-(with-added-vitamin-a)"
+        }, {"food_description": "Per 100g - Calories: 43kcal | Fat: 0.97g | Carbs:
+        4.97g | Protein: 3.48g", "food_id": "33756", "food_name": "Milk (1% Lowfat
+        with Added Vitamin A and Nonfat Solids)", "food_type": "Generic", "food_url":
+        "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(1%25-lowfat-with-added-vitamin-a-and-nonfat-solids)"
+        }, {"food_description": "Per 100g - Calories: 48kcal | Fat: 1.17g | Carbs:
+        5.52g | Protein: 3.93g", "food_id": "33757", "food_name": "Milk (1% Lowfat
+        with Added Vitamin A and Protein)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(1%25-lowfat-with-added-vitamin-a-and-protein)"
+        }, {"food_description": "Per 100g - Calories: 362kcal | Fat: 0.77g | Carbs:
+        51.98g | Protein: 36.16g", "food_id": "33823", "food_name": "Milk (Nonfat
+        with Added Vitamin A, Dry)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(nonfat-with-added-vitamin-a-dry)"
+        }, {"food_description": "Per 100g - Calories: 358kcal | Fat: 0.72g | Carbs:
+        52.19g | Protein: 35.10g", "food_id": "33824", "food_name": "Milk (Nonfat,
+        Dry, Instant)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(nonfat-dry-instant)"
+        }, {"food_description": "Per 100g - Calories: 108kcal | Fat: 7.00g | Carbs:
+        5.36g | Protein: 5.98g", "food_id": "33778", "food_name": "Sheep Milk", "food_type":
+        "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/sheep-milk"
+        }, {"food_description": "Per 100g - Calories: 61kcal | Fat: 3.46g | Carbs:
+        4.46g | Protein: 3.10g", "food_id": "33762", "food_name": "Milk (Low Sodium)",
+        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(low-sodium)"
+        }, {"food_description": "Per 100g - Calories: 496kcal | Fat: 26.71g | Carbs:
+        38.42g | Protein: 26.32g", "food_id": "33763", "food_name": "Milk (Whole Milk,
+        Dry)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(whole-milk-dry)"
+        }, {"food_description": "Per 100g - Calories: 358kcal | Fat: 0.72g | Carbs:
+        52.19g | Protein: 35.10g", "food_id": "33765", "food_name": "Milk (Nonfat
+        with Added Vitamin A, Instant)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(nonfat-with-added-vitamin-a-instant)"
+        }, {"food_description": "Per 100g - Calories: 354kcal | Fat: 0.20g | Carbs:
+        51.80g | Protein: 35.50g", "food_id": "33766", "food_name": "Milk (Nonfat
+        Calcium Reduced, Dry)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/milk-(nonfat-calcium-reduced-dry)"
+        }, {"food_description": "Per 100g - Calories: 387kcal | Fat: 5.78g | Carbs:
+        49.00g | Protein: 34.30g", "food_id": "33767", "food_name": "Buttermilk (Dried)",
+        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/buttermilk-(dried)"
+        }, {"food_description": "Per 100g - Calories: 78kcal | Fat: 1.90g | Carbs:
+        12.13g | Protein: 2.99g", "food_id": "33861", "food_name": "Chocolate Milk
+        (Reduced Fat with Added Calcium)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/chocolate-milk-(reduced-fat-with-added-calcium)"
+        }, {"food_description": "Per 100g - Calories: 56kcal | Fat: 2.00g | Carbs:
+        5.30g | Protein: 4.10g", "food_id": "40620", "food_name": "Buttermilk (Reduced
+        Fat, Cultured)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/usda\/buttermilk-(reduced-fat-cultured)"
+        }, {"food_description": "Per 266g - Calories: 170kcal | Fat: 1.20g | Carbs:
+        30.65g | Protein: 9.35g", "food_id": "917", "food_name": "Chocolate Malted
+        Milk (with Skim Milk)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk-malted-unfortified-chocolate-made-with-skim-milk"
+        }, {"food_description": "Per 100g - Calories: 56kcal | Fat: 0.28g | Carbs:
+        10.89g | Protein: 3.42g", "food_id": "890", "food_name": "Skim Chocolate Milk",
+        "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk-chocolate-skim-milk-based"
+        }, {"food_description": "Per 102g - Calories: 94kcal | Fat: 2.00g | Carbs:
+        11.35g | Protein: 7.55g", "food_id": "832", "food_name": "2% Fat Evaporated
+        Milk (Undiluted)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk-evaporated-2%25-fat-undiluted"
+        }, {"food_description": "Per 493g - Calories: 202kcal | Fat: 0.49g | Carbs:
+        29.04g | Protein: 19.33g", "food_id": "837", "food_name": "Skim Evaporated
+        Milk (Diluted)", "food_type": "Generic", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/generic\/milk-evaporated-skim-diluted"
+        } ], "max_results": "50", "page_number": "0", "total_results": "1125" }}'
+    http_version: '1.1'
+  recorded_at: Thu, 11 Oct 2012 09:35:53 GMT
