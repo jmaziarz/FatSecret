@@ -4,8 +4,8 @@ require File.expand_path('../lib/fat_secret/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Matt Beedle"]
   gem.email         = ["mattbeedle@googlemail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{FatSecret API wrapper}
+  gem.summary       = %q{FatSecret API wrapper}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency('active_attr')
   gem.add_dependency('activesupport')
-  gem.add_dependency('typhoeus', '~> 0.5.0.rc')
+  # gem.add_dependency('typhoeus', '~> 0.5.0.rc')
   gem.add_dependency('yajl-ruby')
 
   gem.add_development_dependency('fakeweb')

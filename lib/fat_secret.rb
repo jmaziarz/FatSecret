@@ -13,7 +13,7 @@ require 'fat_secret/serving'
 require 'fat_secret/version'
 require 'logger'
 require 'open-uri'
-require 'typhoeus'
+# require 'typhoeus'
 require 'yajl'
 
 module FatSecret
