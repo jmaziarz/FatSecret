@@ -17,11 +17,11 @@ Installation
 
 Bundler:
 
-`gem 'fat_secret'
+`gem 'fat_secret'`
 
 Otherwise:
 
-`gem install fat_secret
+`gem install fat_secret`
 
 
 Setup
@@ -39,13 +39,17 @@ end
 Searching for Food
 ------------------
 
+```ruby
 foods = FatSecret::Food.search('Milk')
+```
 
 Getting 1 Food
 --------------
 
+```ruby
 food = FatSecret::Food.get(id)
 food.servings (automatically lazy loaded for you)
+```
 
 
 Development
