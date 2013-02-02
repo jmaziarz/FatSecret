@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency('active_attr')
   gem.add_dependency('activesupport')
   # gem.add_dependency('typhoeus', '~> 0.5.0.rc')
-  gem.add_dependency('yajl-ruby')
+  # gem.add_dependency('yajl-ruby')
 
   gem.add_development_dependency('fakeweb')
   gem.add_development_dependency('rspec')

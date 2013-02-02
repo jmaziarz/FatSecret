@@ -18,7 +18,7 @@ module FatSecret
         #   "#{uri.scheme}://#{uri.host}:#{uri.port}#{uri.path}",
         #   params: params, followlocation: true
         # )
-        Yajl::Parser.parse(uri.read)
+        JSON.parse(uri.read)
       end
 
       private

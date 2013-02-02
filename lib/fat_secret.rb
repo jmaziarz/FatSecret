@@ -14,7 +14,7 @@ require 'fat_secret/version'
 require 'logger'
 require 'open-uri'
 # require 'typhoeus'
-require 'yajl'
+# require 'yajl'
 
 module FatSecret
 
