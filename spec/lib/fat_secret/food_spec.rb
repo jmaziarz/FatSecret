@@ -35,30 +35,49 @@ describe FatSecret::Food do
   describe '.get' do
     before { configure }
 
-    subject do
-      VCR.use_cassette('get_milk', match_requests_on: [ :host ], allow_playback_repeats: true) do
-        FatSecret::Food.get(793)
+    context 'when there are multiple servings', :multiple_servings do
+      subject do
+        VCR.use_cassette('get_milk', match_requests_on: [ :host ], allow_playback_repeats: true) do
+          FatSecret::Food.get(793)
+        end
+      end
+
+      it 'should return a food object' do
+        subject.should be_instance_of(FatSecret::Food)
+      end
+
+      it 'should populate the food name' do
+        subject.name.should eql('Milk')
+      end
+
+      it 'should populate the servings' do
+        subject.servings.should_not be_blank
+      end
+
+      it 'should use serving objects in the servings relation' do
+        subject.servings.first.should be_instance_of(FatSecret::Serving)
+      end
+
+      it 'should add the serving data to the servings' do
+        subject.servings.first.saturated_fat.should eql(2.965)
       end
     end
 
-    it 'should return a food object' do
-      subject.should be_instance_of(FatSecret::Food)
-    end
+    context 'when there is only 1 serving', :one_serving do
+      subject do
+        VCR.use_cassette(
+          'get_steel_cut_oats', match_requests_on: [ :host ],
+          allow_playback_repeats: true
+        ) do
+          FatSecret::Food.get(2095870)
+        end
+      end
 
-    it 'should populate the food name' do
-      subject.name.should eql('Milk')
-    end
+      it { should be_instance_of(FatSecret::Food) }
 
-    it 'should populate the servings' do
-      subject.servings.should_not be_blank
-    end
+      it { subject.servings.count.should eql(1) }
 
-    it 'should use serving objects in the servings relation' do
-      subject.servings.first.should be_instance_of(FatSecret::Serving)
-    end
-
-    it 'should add the serving data to the servings' do
-      subject.servings.first.saturated_fat.should eql(2.965)
+      it { subject.servings.first.calories.should eql(150.0) }
     end
   end
 

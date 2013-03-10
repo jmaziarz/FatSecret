@@ -17,7 +17,9 @@ module FatSecret
 
           define_method "#{type}=" do |array|
             klass = "FatSecret::#{type.to_s.singularize.classify}".constantize
-            servings = array[type.to_s.singularize].map do |attrs|
+            servings = array[type.to_s.singularize]
+            servings = [servings] unless servings.is_a?(Array)
+            servings = servings.map do |attrs|
               klass.new(attrs)
             end
             @servings = HasManyProxy.new(servings)

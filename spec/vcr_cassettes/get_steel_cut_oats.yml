@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://platform.fatsecret.com/rest/server.api?food_id=2095870&format=json&method=food.get&oauth_consumer_key=7ebedda1451640ecbd8db41ea22d1351&oauth_nonce=429e9d97ad3f4f51&oauth_signature=xxPMCPmw5CxkTpTo2RGpmevl5co%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1362913468&oauth_version=1.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      server:
+      - Microsoft-IIS/7.5
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
+      date:
+      - Sun, 10 Mar 2013 11:04:27 GMT
+      content-length:
+      - '840'
+    body:
+      encoding: US-ASCII
+      string: ! '{ "food": {"brand_name": "Hodgson Mill", "food_id": "2095870", "food_name":
+        "Steel Cut Oats", "food_type": "Brand", "food_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/hodgson-mill\/steel-cut-oats",
+        "servings": {"serving": {"calcium": "0", "calories": "150", "carbohydrate":
+        "27", "cholesterol": "0", "fat": "2.5", "fiber": "4", "iron": "10", "measurement_description":
+        "serving", "metric_serving_amount": "40.000", "metric_serving_unit": "g",
+        "monounsaturated_fat": "0", "number_of_units": "1.000", "polyunsaturated_fat":
+        "0", "potassium": "167", "protein": "5", "saturated_fat": "0.5", "serving_description":
+        "1\/4 cup", "serving_id": "2053719", "serving_url": "http:\/\/www.fatsecret.com\/calories-nutrition\/hodgson-mill\/steel-cut-oats",
+        "sodium": "0", "sugar": "1", "trans_fat": "0", "vitamin_a": "0", "vitamin_c":
+        "0" } } }}'
+    http_version: '1.1'
+  recorded_at: Sun, 10 Mar 2013 11:04:28 GMT
+recorded_with: VCR 2.3.0

@@ -14,11 +14,11 @@ module FatSecret
 
         params = default_parameters.merge(params).merge(method: method)
         uri = request_uri('GET', params)
-        # response = Typhoeus.get(
-        #   "#{uri.scheme}://#{uri.host}:#{uri.port}#{uri.path}",
-        #   params: params, followlocation: true
-        # )
-        JSON.parse(uri.read)
+        response = uri.read
+        FatSecret.configuration.logger.debug(
+          "FatSecret Response: #{response}"
+        )
+        JSON.parse(response)
       end
 
       private
