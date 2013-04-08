@@ -13,6 +13,9 @@ module FatSecret
         )
 
         params = default_parameters.merge(params).merge(method: method)
+        params.each do |key, value|
+          params[key] = CGI.escape(value) if value.is_a?(String)
+        end
         uri = request_uri('GET', params)
         response = uri.read
         FatSecret.configuration.logger.debug(
@@ -24,7 +27,7 @@ module FatSecret
       private
 
       def request_uri(http_method, params)
-        params.merge!('oauth_signature' => generate_signature(http_method, params))
+        params.merge!(oauth_signature: generate_signature(http_method, params))
         URI.parse("#{FatSecret.configuration.uri}?#{params.to_param}")
       end
 
