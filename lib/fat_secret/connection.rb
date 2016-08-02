@@ -57,7 +57,7 @@ module FatSecret
 
       def signature_value(base_string, access_secret = '')
         digest = OpenSSL::HMAC.digest(
-          OpenSSL::Digest::Digest.new('sha1'),
+          OpenSSL::Digest.new('sha1'),
           "#{FatSecret.configuration.shared_secret}&#{access_secret}",
           base_string
         )
