@@ -20,8 +20,14 @@ module FatSecret
           'foods.search', default_search_options.
           merge({ search_expression: search_expression }).merge(options)
         )
+
+        food_results = {}
+        unless results['foods']['food'].nil?
+          food_results = results['foods']['food'].map { |f| new(f) }
+        end
+
         ResultsProxy.new(
-          results['foods']['food'].map { |f| new(f) },
+          food_results,
           results['foods']['max_results'],
           results['foods']['page_number'],
           results['foods']['total_results']
