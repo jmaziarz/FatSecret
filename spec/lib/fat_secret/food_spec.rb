@@ -30,6 +30,26 @@ describe FatSecret::Food do
     it 'should have a page number' do
       subject.page_number.should eq(0)
     end
+
+    context 'when there are no results', :no_results do
+      subject do
+        VCR.use_cassette('search_for_non_existant_food', match_requests_on: [ :host ], allow_playback_repeats: true) do
+          FatSecret::Food.search('asdf')
+        end
+      end
+
+      it 'should have a result count of zero' do
+        subject.total_results.should eql(0)
+      end
+
+      it 'should have no foods' do
+        subject.should be_empty
+      end
+
+      it 'should be an array' do
+        subject.should be_a(Array)
+      end
+    end
   end
 
   describe '.get' do

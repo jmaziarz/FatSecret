@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    # uri: http://platform.fatsecret.com/rest/server.api?format=json&max_results=50&method=foods.search&oauth_consumer_key=7ebedda1451640ecbd8db41ea22d1351&oauth_nonce=1234&oauth_signature=YEHblI2X9JWOhRgWwWDvKw%2BhoPw%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1349948152&oauth_version=1.0&page_number=0&search_expression=asdf
+    uri: http://platform.fatsecret.com/rest/server.api?format=json&max_results=50&method=foods.search&oauth_consumer_key=abcd&oauth_nonce=1234&oauth_signature=PqE6UMGxCF4FySgesdMDE8qNopI%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1325372400&oauth_version=1.0&page_number=0&search_expression=asdf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      server:
+      - Microsoft-IIS/7.5
+      x-aspnet-version:
+      - 2.0.50727
+      date:
+      - Thu, 11 Oct 2012 09:35:46 GMT
+      content-length:
+      - '14621'
+    body:
+      encoding: US-ASCII
+      string: ! '{ "foods": { "food": [], "max_results": "50", "page_number": "0", "total_results": "0" }}'
+    http_version: '1.1'
+  recorded_at: Thu, 11 Oct 2012 09:35:53 GMT
