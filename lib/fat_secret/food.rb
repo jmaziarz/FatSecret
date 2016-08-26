@@ -23,7 +23,11 @@ module FatSecret
 
         food_results = {}
         unless results['foods']['food'].nil?
-          food_results = results['foods']['food'].map { |f| new(f) }
+          if results['foods']['food'].kind_of?(Array)
+            food_results = results['foods']['food'].map { |f| new(f) }
+          else
+            food_results = Array(new(results['foods']['food']))
+          end
         end
 
         ResultsProxy.new(

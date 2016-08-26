@@ -50,6 +50,16 @@ describe FatSecret::Food do
         subject.should be_a(Array)
       end
     end
+
+    context 'when there is only one result' do
+      VCR.use_cassette('search_for_milk', match_requests_on: [ :host ], allow_playback_repeats: true) do
+        FatSecret::Food.search('Milk', page_number: 0, max_results: 1)
+      end
+
+      it 'should have one result' do
+        subject.count.should eq(1)
+      end
+    end
   end
 
   describe '.get' do
