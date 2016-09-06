@@ -16,11 +16,19 @@ module FatSecret
         params.each do |key, value|
           params[key] = CGI.escape(value) if value.is_a?(String)
         end
+
         uri = request_uri('GET', params)
+
+        FatSecret.configuration.logger.debug(
+          "FatSecret URI: #{uri}"
+        )
+
         response = uri.read
+
         FatSecret.configuration.logger.debug(
           "FatSecret Response: #{response}"
         )
+
         JSON.parse(response)
       end
 
