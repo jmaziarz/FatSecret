@@ -10,15 +10,15 @@ module FatSecret
 
     class << self
       def create(user_id = '')
-        new FatSecret::Connevction.get('profile.create', user_id: user_id )
+        FatSecret::Connection.get('profile.create', user_id: user_id)
       end
 
-      def get(oauth_token = '')
-        new FatSecret::Connection.get('profile.get', oauth_token: oauth_token)
+      def get(oauth_token = '', oauth_secret = '')
+        new FatSecret::Connection.get('profile.get', oauth_token: oauth_token, oauth_secret: oauth_secret)
       end
 
       def get_auth(user_id)
-        new FatSecret::Connection.get('profile.get_auth', user_id: user_id)
+        FatSecret::Connection.get('profile.get_auth', user_id: user_id)
       end
     end
   end
