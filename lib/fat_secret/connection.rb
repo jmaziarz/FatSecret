@@ -12,12 +12,14 @@ module FatSecret
           "FatSecret::Connection.get #{method} with #{params}"
         )
 
+        access_secret = params.delete(:oauth_secret) || ''
+
         params = default_parameters.merge(params).merge(method: method)
         params.each do |key, value|
           params[key] = CGI.escape(value) if value.is_a?(String)
         end
 
-        uri = request_uri('GET', params)
+        uri = request_uri('GET', params, access_secret)
 
         FatSecret.configuration.logger.debug(
           "FatSecret URI: #{uri}"
@@ -34,17 +36,17 @@ module FatSecret
 
       private
 
-      def request_uri(http_method, params)
-        params.merge!(oauth_signature: generate_signature(http_method, params))
+      def request_uri(http_method, params, access_secret = '')
+        params.merge!(oauth_signature: generate_signature(http_method, params, access_secret))
         URI.parse("#{FatSecret.configuration.uri}?#{params.to_param}")
       end
 
-      def generate_signature(http_method, params)
+      def generate_signature(http_method, params, access_secret = '')
         signature_value(
           [
             CGI.escape(http_method), CGI.escape(FatSecret.configuration.uri),
             CGI.escape(Hash[params.sort].to_query)
-          ].join('&')
+          ].join('&'), access_secret
         )
       end
 
