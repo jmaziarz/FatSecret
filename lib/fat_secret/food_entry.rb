@@ -46,11 +46,15 @@ module FatSecret
       def parse_entries(food_entries)
         entries = Array.new
 
-        food_entries['food_entry'].each do |e|
-          entries << new(e)
+        if food_entries['food_entry'].instance_of?(Hash)
+          entries << new(food_entries['food_entry'])
+        else
+          food_entries['food_entry'].each do |e|
+            entries << new(e)
+          end
         end
 
-        entries
+        return entries
       end
 
       def days_since_epoch(date)
