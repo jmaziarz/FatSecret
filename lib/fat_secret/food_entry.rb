@@ -33,7 +33,7 @@ module FatSecret
 
     class << self
 
-      def get(oauth_token, oauth_secret, date = Date.today)
+      def get(oauth_token, oauth_secret, date = Date.current)
         entries = FatSecret::Connection.get('food_entries.get', oauth_token: oauth_token, oauth_secret: oauth_secret, date: days_since_epoch(date))
 
         if entries['food_entries']
