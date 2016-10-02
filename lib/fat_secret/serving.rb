@@ -30,5 +30,32 @@ module FatSecret
     alias :serving_url= :url=
 
     belongs_to :food
+
+    def serving_measurement
+      measurement_from_description
+    end
+
+    def serving_multiplier
+      serving_units / units_from_description.to_f
+    end
+
+    private
+
+    # TODO: DRY *_from_description methods
+    def measurement_from_description
+      if measurement_description == 'serving'
+        description.split(' ', 2)[1]
+      else
+        measurement_description
+      end
+    end
+
+    def units_from_description
+      if measurement_description == 'serving'
+        description.split(' ', 2)[0]
+      else
+        number_of_units
+      end
+    end
   end
 end
